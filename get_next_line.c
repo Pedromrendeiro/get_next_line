@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 	int			i;
 
 	i = 0;
-	if (fd < 0 || BUFFER_SIZE < 1)
+	if (fd < 0 || BUFFER_SIZE < 1 || fd >= FOPEN_MAX)
 	{
 		while (buff[i])
 			buff[i++] = 0;
